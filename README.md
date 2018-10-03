@@ -52,8 +52,10 @@ For every pair of the successive frames, the rotation matrix **R** and the trans
 5. Take scale information from some external source and update the translation and Rotation.
 
 ----
+
 ## TO DO
-The limitation of the monocular visual odometry is that it can't evaluate the scale, which has a huge impact on translation. In order to resolve the problem, SVO (Fast Semi-Direct Monocular Visual Odometry) can be used. And the data from the IMU will provide a relative reliable scale value. The other problem is that: visual odometry alone is more practical in the static environment. If other objects (features) are moving, then the estimated pose will messed up. Thus, more sensors (eg. IMU) are needed for sensor fusion to optimize the pose result
+The limitation of the monocular visual odometry is that it can't evaluate the scale, which has a huge impact on translation. In order to resolve the problem, SVO (Fast Semi-Direct Monocular Visual Odometry) can be used. And the data from the IMU will provide a relative reliable scale value. The other problem is that: visual odometry alone is more practical in the static environment. If other objects (features) are moving, then the estimated pose will messed up. Thus, more sensors (eg. IMU) are needed for sensor fusion to optimize the pose result.
+
 ----
 ## Thanks
 * [Avi Singh's blog](https://avisingh599.github.io/vision/monocular-vo/): Monocular Visual Odometry using OpenCV
