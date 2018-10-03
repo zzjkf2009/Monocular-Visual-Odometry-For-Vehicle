@@ -1,0 +1,12 @@
+<launch>
+<arg name = "focal_length" default ="718.8560" />
+<arg name = "principle_point1" default = "607.1928" />
+<arg name = "principle_point2" default = "185.2157" />
+<arg name = "filepath" default = "$(find visual_odometry)/source_image/image_02/data/%.10d.png"/>
+
+<node pkg = "visual_odometry" type = "image_source" name = "image_publisher" args = "$(arg filepath)"/>
+
+<node pkg = "visual_odometry" type = "visual_odometry" name = "vehicle_visual_odometry" args = "$(arg focal_length) $(arg principle_point1) $(arg principle_point2)" output= "screen"/>
+
+<node pkg="rviz" name="rviz_visilization" type="rviz" args="-d $(find visual_odometry)/rviz/visual_odometry.rviz "/>
+</launch>
